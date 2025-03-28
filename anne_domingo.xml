@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students>
+    <student>
+        <picture>https://i.pinimg.com/736x/94/71/37/947137ec2e969a6928d047325af9ef63.jpg</picture>
+        <name>Domingo, Anne</name>
+        <course>BSIT</course>
+        <yearLevel>3BG1</yearLevel>
+        <adviser>Mrs. Noemi Reyes</adviser>
+        <schoolYear>2022-2026</schoolYear>
+    </student>
+    <student>
+        <picture>https://i.pinimg.com/736x/55/a4/00/55a4008a5641cfbd8669c3f3f248bc53.jpg</picture>
+        <name>Lapuz, Alyssa Mae</name>
+        <course>BSIT</course>
+        <yearLevel>3HG1</yearLevel>
+        <adviser>Mr. Renato Arellano</adviser>
+        <schoolYear>2022-2025</schoolYear>
+    </student>
+    <student>
+        <picture>https://i.pinimg.com/736x/a8/3b/ce/a83bce0751537dc9855af50260f123bd.jpg</picture>
+        <name>Santos, Angel</name>
+        <course>BSIT</course>
+        <yearLevel>3BG2</yearLevel>
+        <adviser>Mr. Alvin Cruz</adviser>
+        <schoolYear>2022-2026</schoolYear>
+    </student>
+    <student>
+        <picture>https://i.pinimg.com/736x/80/89/0c/80890c2f2c07ecfd36ea883dcc698560.jpg</picture>
+        <name>Carpio, Janna</name>
+        <course>BSIS</course>
+        <yearLevel>3CG1</yearLevel>
+        <adviser>Ms. Aira Lladones</adviser>
+        <schoolYear>2022-2026</schoolYear>
+    </student>
+    <student>
+        <picture>https://i.pinimg.com/736x/80/f4/cc/80f4cca3958966d7e6e2d15927e63a5a.jpg</picture>
+        <name>Roque, Jocelyn</name>
+        <course>BLIS</course>
+        <yearLevel>3CG2</yearLevel>
+        <adviser>Mr. Francis Castro</adviser>
+        <schoolYear>2022-2026</schoolYear>
+    </student>
+</students>

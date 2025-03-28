@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WST2 - Midterms Exam Part II</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            justify-content: center;
+            padding: 30px;
+            max-width: 1400px;
+            margin: auto;
+        }
+        .card {
+            border: 3px solid #000;
+            padding: 30px;
+            background-color: #fff;
+            text-align: left;
+            position: relative;
+            font-size: 20px;
+            border-radius: 10px;
+        }
+        .card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body onload="loadData()">
+    <h1>Bulacan State University</h1>
+    <h2>Library Users</h2>
+    <div id="studentRecords" class="grid-container"></div>
+
+    <script>
+        function loadData() {
+            fetch('anne_domingo.xml')
+                .then(response => response.text())
+                .then(str => {
+                    let parser = new DOMParser();
+                    let xml = parser.parseFromString(str, "text/xml");
+                    let students = xml.getElementsByTagName("student");
+                    let output = "";
+
+                    for (let i = 0; i < students.length; i++) {
+                        let student = students[i];
+                        output += "<div class='card'>";
+                        output += "<img src='" + student.getElementsByTagName("picture")[0].textContent + "' alt='Student Picture'>";
+                        output += "Name: " + student.getElementsByTagName("name")[0].textContent + "<br><br>";
+                        output += "Course: " + student.getElementsByTagName("course")[0].textContent + "<br><br>";
+                        output += "Year Level/Section: " + student.getElementsByTagName("yearLevel")[0].textContent + "<br><br>";
+                        output += "Adviser: " + student.getElementsByTagName("adviser")[0].textContent + "<br><br>";
+                        output += "School Year: " + student.getElementsByTagName("schoolYear")[0].textContent + "<br>";
+                        output += "</div>";
+                    }
+
+                    document.getElementById("studentRecords").innerHTML = output;
+                })
+                .catch(error => console.error("Error loading XML:", error));
+        }
+    </script>
+</body>
+</html>
